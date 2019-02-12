@@ -1,2 +1,7 @@
 -= ===>delegate.remove
 += ==>delegate.combine
+
+delegate fb;  
+if(fb!=null)
+fb(val)
+==>fb?.invoke(val)
