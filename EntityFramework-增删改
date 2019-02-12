@@ -1,0 +1,32 @@
+假设 database のname: Database, table 为Table
+增加：
+Table tb = new Table();
+tb.ID=1;
+tb.name="loveLL";
+Database db  = new Database();
+db.Table.Add(tb);
+dt.saveChanges();//改变通知数据库！！
+
+删除： 先查找到要删除的列
+//查找所有的id==1,构成List
+ var tbList = from u in tb.Table
+              where u.ID==1
+              select u;
+  //返回第一个元素
+Table tablefirst = tbList.FirstOrDefault();
+if(tablefirst == null) return;
+//第一种
+db.Table.Remove(tablefirst);
+db.saveChanges();
+//第二种
+dt.Entry<Table>(tablefirst).State = System.Data.EntityState.Delete;
+db.saveChanges();
+
+//修改
+var tbList = from u in db.Table
+             where u.ID==2
+             Select u;
+ Table tbf = tbList.FirstOrDefault();
+ tbf.name ="morelove";
+ db.Entry<Table>(tbf).State = System.Data.EntityState.Modify;
+ db.saveChanges();
