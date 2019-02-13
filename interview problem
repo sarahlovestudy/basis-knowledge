@@ -1,0 +1,17 @@
+1软件开发几个阶段
+ 需求分析，架构设计，代码编写，QA部署
+2 using 和new
+ using 引用名称空间 或者使用非托管资源
+ new 新建实例或者隐藏父类方法
+3 public static const int a=1;错误 去掉static
+
+4装箱 值类型转成引用类型叫装箱，反之叫拆箱
+
+自我介绍
+my name is Liu shuangshuang ,it is really a great honor to have this opportunity for a interview,
+ i hope i can make a good performace today.i am 30 years old,born in shandong province. 
+ i receive my bachelor degree at shanghai maritime university.my major is control thery and control engeer.
+ and after granduation, i work at shanghai topnc technology company as a software engineer,during this time ,
+  I competed two important events: I got married and gave birth to a baby. and then i decided to find 
+  a more big and perfessional platform to develop,so I jump to HT technology company.
+  however, arrears wage heppens.
