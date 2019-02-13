@@ -30,3 +30,32 @@ var tbList = from u in db.Table
  tbf.name ="morelove";
  db.Entry<Table>(tbf).State = System.Data.EntityState.Modify;
  db.saveChanges();
+
+
+3 斐波那契数列1 1 2 3 5...递归求解
+public static int Foo(int i)
+{
+  if(i <=0) return 0;
+  else if(i>0&&i<=2)return 1;
+  else return Foo(i-1)+Foo(i-2);
+  }
+  调用
+  Foo(30)://求解第30位数字大小
+  
+  4 求素因数
+  public static void Foo(int num)
+  {
+    for(int i=2;i*i<num;i++)
+    {
+       while(num%i==0)
+       {
+         console.writeline(i+ " ");
+         num = num/i;
+         }
+         if(num!=1)
+         Console.write(num);
+      }
+      
+   5 sleep() wait()
+     sleep():将当前线程挂起指定的时间
+     wait()释放对象上的锁并阻塞当前线程，直到他重新获得该锁
