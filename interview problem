@@ -15,3 +15,79 @@ my name is Liu shuangshuang ,it is really a great honor to have this opportunity
   I competed two important events: I got married and gave birth to a baby. and then i decided to find 
   a more big and perfessional platform to develop,so I jump to HT technology company.
   however, arrears wage heppens.
+
+
+
+5 internal :在同一个命名空间可以访问
+  protected： 保护成员，该类内部和继承类汇总可以访问
+  private : 私有成员，在类的内部才可以可以访问
+6 重载：是方法的名称相同，参数或者参数类型不同，进行多次重载适应不同的需要
+  override是进行基类中函数的重写
+7 索引器的实现过程：
+  索引器是一个特殊的类成员，能够让对象类似素组的方式来存取，是程序看起来更直观，更容易编写
+    对象是类的实例
+  public、修饰符 数据类型int/string/.. this[int index]
+  {
+     get{/获得属性的代码}
+     set
+      {//设置属性的代码}
+  }
+    不一定根据数字进行索引，可以用任意类型
+8：DataSet:数据存储器
+9：.net中配件的意思是程序集 ,中间语言，源数据
+10：c# string str =null  string str = ""区别
+   =null :不给分配内存空间 ;=""给分配内存空间
+11：面向对象具有继承性；封装性和多态性  
+   多态：允许将子类类型的指针赋值给父类类型的指针
+   继承是子类使用父类的方法
+   
+12 基本数据类型 :值类型和引用类型
+  值类型  short int long float double bool char ulong uint sbyte decimal ushort
+13 使用sealed 声明class 可以防止被继承
+14 interface 接口是什么
+   只含有共有抽象放啊的类，这些方法必须在子类中被实现
+15  遍历页面所以的textbox控件并赋值
+    foreach(System.Windows.Forms.Controls control in this.Controls)
+    {
+      if(Control is System.Windows.Forms.TextBox)
+      { 
+         System.Windows.Forms.TextBox tb = (Sytem.Windows.Forms.TextBox)Control;
+         tb.text = String.Empty;
+         }
+      }
+      
+  16 冒泡
+  
+  void BubbleSort(SeqList R)
+  {
+     Bool exchange;
+      for(int i=1;i<n;i++)
+      {
+        exchange =false;
+        for(int j=n;j>=i;j--)
+        {
+         if(R[j+1]<R[j])
+          { 
+            R[0]=R[j+1];
+            R[j+1]=R[j];
+            R[j]=R[0];
+            exchange =true;
+            }
+            if(!exchange) return
+          }
+       }   
+       
+16托管、非托管
+ 受CLR运行的 托管
+ 非托管dll new ,数据流
+
+17 值类型 
+   1简单类型：int long bool 2枚举：enum 3结构体 struct
+   引用类型：1类类型 :string,自建类 2：数组类型：一位数组多维数组；3：接口类型 interface 4:委托类型
+ 18 lambda表达式 =>
+   (a,b) => (int temp a+b; return temp;)
+ 19 设计模式
+    单例模式 简单工厂模式 抽象模式 建造者模式 原型模式 适配器模式 组合模式
+    
+    
+    
