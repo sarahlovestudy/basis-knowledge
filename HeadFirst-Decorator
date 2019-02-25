@@ -1,0 +1,53 @@
+设计模式-装饰类
+用组合的方式-而不是单纯的继承
+Component:基类
+createComponent:具体基类
+Decorator:装饰基类继承Component: Has a 有一个基类的属性，在构造函数里
+createDecorator:具体装饰类
+
+例子
+abstract class Phone
+{
+  public abstact void Print();
+}
+abstract class Derator:Phone
+{
+  private Phone phone:
+  public Decorator(Phone p)
+  {
+    phone = p;
+  }
+  public override void Print()
+   {
+     //装饰抽象类重写Print
+   }
+     
+}
+class ApplePhone:Phone
+{
+   public override void Print()
+   {
+     //具体实现Print()
+     Console.WriteLine("Apple");
+   }
+}
+class Sticker:Decorator
+{
+  public Sticker(Phone p ):base(p){}
+  public override void Print()
+  {
+    base.Print();/调用具体实现的print
+    AddNewSticker();//额外加其他装饰操作
+  }
+  public void AddNewSticker()
+  {
+  }
+}
+
+
+
+//使用
+Phone phone = new ApplePhone();
+Decorator sticker = new Sticker(phone);
+Decoratpr associati = new Associati(sticker);
+associati.Print();
